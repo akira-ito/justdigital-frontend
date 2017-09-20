@@ -1,0 +1,56 @@
+.App {
+	max-width: 940px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 10px 0px;
+	padding: 35px;
+	position: relative;
+	top: 5%;
+	border-radius: 3px;
+
+	.App__row {
+		overflow: hidden;
+		padding: 10px;
+		margin: 0 auto;
+    	width: 90%;
+	}
+
+	.App__title {
+		font-size: 2em;
+	    font-weight: bold;
+	    padding: 10px 0px;
+	    border-bottom: 1px solid;
+	    margin: 10px 0px;
+	}
+
+	.App__score {
+		float: left;
+		font-size: 3em;
+	    font-weight: bold;
+	    width: 10%;
+	    text-align: center;
+	}
+	.App__img {
+		float: left;
+		width: 40%;
+		min-width: 250px;
+	}
+	.App__form {
+		float: left;
+		width: 50%;
+	}
+
+	.App__bottom_bar {
+		width: 100%;
+	}
+
+	.App__tips {
+		float: left;
+	    text-align: right;
+	    width: 80%;
+	}
+
+	.App__next {
+		float: left;
+	    text-align: right;
+	}
+}
