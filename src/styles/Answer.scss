@@ -15,6 +15,12 @@
     	padding: 5px;
 	}
 
+	.Answer__error {
+		font-size: 0.9em;
+	    color: red;
+	    font-style: italic;
+	}
+
 	.Answer__Form_btn {
 	    background: #ae8e39;
 	    padding: 8px;
@@ -24,6 +30,11 @@
 	    font-size: 0.8em;
 	    font-weight: bold;
 	    border: 1px solid #8d7839;
+
+	    &[disabled] {
+	    	background: #c7b37e;
+	    	cursor: not-allowed;
+	    }
 	}
 	
 }

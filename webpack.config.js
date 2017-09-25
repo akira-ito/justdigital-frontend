@@ -3,8 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const HotModuleReplacementPlugin = require('webpack').HotModuleReplacementPlugin;
 
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  title: 'Mercado Test',
+  title: 'Justdigital',
   template: './src/index.html',
   filename: 'index.html',
   hash: true,
@@ -53,6 +54,19 @@ module.exports = {
                     }
                 ],
             },
+            {
+                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/',    // where the fonts will go
+                            publicPath: '../'       // override the default path
+                        }
+                    }
+                ]
+           }
         ]
     },
     devServer: {
@@ -61,7 +75,8 @@ module.exports = {
         inline: true  
     },
     plugins: [
-        HtmlWebpackPluginConfig
+        HtmlWebpackPluginConfig,
+        new FaviconsWebpackPlugin('./src/images/favicon.png')
     ]
 };
 

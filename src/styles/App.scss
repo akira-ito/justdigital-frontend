@@ -41,16 +41,56 @@
 
 	.App__bottom_bar {
 		width: 100%;
+		overflow: auto;
+	}
+
+	.App__share {
+		float: left;
+	    width: 50%;
 	}
 
 	.App__tips {
-		float: left;
-	    text-align: right;
-	    width: 80%;
+		background: #efeaea;
+	    padding-bottom: 6px;
+	    border: 1px solid transparent;
+	    text-align: center;
+	    float: left;
+	    width: 30%;
+	    cursor: pointer;
+
+	    i {
+			position: relative;
+		    top: 5px;
+	    }
+
+	    span {
+    	    padding: 8px;
+	    }
 	}
 
 	.App__next {
-		float: left;
+	    float: left;
 	    text-align: right;
+	    width: 14%;
+	    padding: 10px;
+	    background: #c0a866;
+	    border: 1px solid transparent;
+	    cursor: pointer;
+
+	    &[disabled] {
+	    	background: #decb97;
+	    	border: 1px solid #c0a866;
+	    	cursor: not-allowed;
+	    }
+	}
+
+	.App__border {
+	    border: 20px solid transparent;
+	    border-left: 20px solid #c0a866;
+	    float: left;
+
+	    &[disabled] {
+	    	cursor: not-allowed;
+	    }
 	}
 }
